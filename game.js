@@ -735,10 +735,34 @@ function drawCake(object) {
 }
 
 function drawMusic(object) {
-  drawPixelRect(object.x, object.y, object.w, object.h, "#242231");
-  drawPixelRect(object.x + 3, object.y + 3, 8, 8, "#7fb7ff");
-  drawPixelRect(object.x + 15, object.y + 4, 7, 7, "#8bd8bd");
-  drawPixelRect(object.x + 6, object.y + 14, 15, 2, "#ffd166");
+  // Pixel-console style music player (fits original w=26 h=18 hitbox)
+
+  // Outer shell
+  drawPixelRect(object.x, object.y, object.w, object.h, "#2b2a37");
+  drawPixelRect(object.x + 1, object.y + 1, object.w - 2, object.h - 2, "#242231");
+
+  // Inner screen frame
+  drawPixelRect(object.x + 2, object.y + 3, object.w - 4, 9, "#121118");
+  drawPixelRect(object.x + 3, object.y + 4, object.w - 6, 7, "#7fb7ff");
+
+  // Screen "music bars" (red/yellow blocks)
+  drawPixelRect(object.x + 3, object.y + 10, 2, 1, "#ef7895");
+  drawPixelRect(object.x + 5, object.y + 9, 2, 2, "#d8173a");
+  drawPixelRect(object.x + 7, object.y + 8, 2, 3, "#ef7895");
+  drawPixelRect(object.x + 9, object.y + 9, 2, 2, "#d8173a");
+  drawPixelRect(object.x + 11, object.y + 7, 2, 4, "#ef7895");
+  drawPixelRect(object.x + 13, object.y + 9, 2, 2, "#ffd166");
+  drawPixelRect(object.x + 15, object.y + 10, 1, 1, "#ef7895");
+  drawPixelRect(object.x + 16, object.y + 9, 1, 2, "#d8173a");
+
+  // Side controls panel
+  drawPixelRect(object.x + 18, object.y + 4, 6, 10, "#121118");
+  drawPixelRect(object.x + 19, object.y + 5, 4, 2, "#7fb7ff"); // label/indicator
+  drawPixelRect(object.x + 20, object.y + 8, 4, 1, "#8bd8bd"); // tiny highlight
+  drawPixelRect(object.x + 19, object.y + 11, 5, 2, "#ffd166"); // "PLAY" area
+
+  // Bottom bar
+  drawPixelRect(object.x + 3, object.y + 15, object.w - 6, 2, "#ffd166");
 }
 
 function drawPlant(object) {
