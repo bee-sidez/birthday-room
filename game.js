@@ -697,45 +697,48 @@ function drawCake(object) {
   const x = object.x;
   const y = object.y;
 
-  // Rectangular brown table with a darker lip
-  drawPixelRect(x + 6, y + 34, 36, 8, "#7a5649");
-  drawPixelRect(x + 10, y + 37, 28, 2, "#46312b");
+  drawPixelRect(x + 1, y + 31, 46, 7, "#7a5649");
+  drawPixelRect(x + 5, y + 35, 38, 4, "#46312b");
 
-  // Mini cake on top of the table (smaller than before, no candles)
-  drawPixelRect(x + 13, y + 24, 22, 6, "#6b3f2f"); // base shadow
-  drawPixelRect(x + 12, y + 20, 24, 7, "#f8d6a5"); // cake body
+  drawPixelRect(x + 3, y + 23, 42, 13, "#6b3f2f");
+  drawPixelRect(x + 1, y + 19, 46, 8, "#f8d6a5");
+  drawPixelRect(x + 4, y + 22, 5, 8, "#fff1ce");
+  drawPixelRect(x + 22, y + 22, 4, 9, "#fff1ce");
+  drawPixelRect(x + 37, y + 21, 5, 7, "#fff1ce");
+  drawPixelRect(x + 9, y + 30, 27, 4, "#3a221c");
 
-  // Frosting drips
-  drawPixelRect(x + 15, y + 21, 4, 4, "#fff1ce");
-  drawPixelRect(x + 21, y + 21, 3, 5, "#fff1ce");
-  drawPixelRect(x + 24, y + 23, 2, 3, "#fff1ce");
+  drawPixelRect(x + 7, y + 11, 34, 13, "#6b3f2f");
+  drawPixelRect(x + 5, y + 8, 38, 7, "#f8d6a5");
+  drawPixelRect(x + 10, y + 11, 5, 6, "#fff1ce");
+  drawPixelRect(x + 29, y + 11, 4, 7, "#fff1ce");
+  drawPixelRect(x + 15, y + 18, 19, 4, "#3a221c");
 
-  // Simple top decoration
-  drawPixelRect(x + 15, y + 18, 4, 4, "#ef334d");
-  drawPixelRect(x + 20, y + 17, 6, 5, "#ef7895");
-  drawPixelRect(x + 23, y + 18, 3, 3, "#d8173a");
+  drawPixelRect(x + 14, y + 2, 7, 7, "#ef334d");
+  drawPixelRect(x + 26, y + 1, 9, 8, "#ef334d");
+  drawPixelRect(x + 35, y + 5, 8, 7, "#ef334d");
+  drawPixelRect(x + 17, y + 3, 2, 2, "#fff6d7");
+  drawPixelRect(x + 29, y + 2, 2, 2, "#fff6d7");
+  drawPixelRect(x + 38, y + 6, 2, 2, "#fff6d7");
+  drawPixelRect(x + 31, y - 6, 2, 7, "#70a642");
+  drawPixelRect(x + 33, y - 10, 5, 5, "#70a642");
 
-  // Small side chocolate hints
-  drawPixelRect(x + 13, y + 26, 3, 2, "#3a221c");
-  drawPixelRect(x + 26, y + 26, 3, 2, "#3a221c");
+  drawPixelRect(x + 11, y - 9, 2, 18, "#6b3f2f");
+  drawPixelRect(x + 34, y - 11, 2, 19, "#6b3f2f");
+  drawPixelRect(x + 10, y - 13, 4, 4, "#ff8b52");
+  drawPixelRect(x + 33, y - 15, 4, 4, "#ff8b52");
+  drawPixelRect(x + 11, y - 15, 2, 2, "#ffd166");
+  drawPixelRect(x + 34, y - 17, 2, 2, "#ffd166");
+
+  drawPixelRect(x + 14, y + 14, 4, 4, "#d8173a");
+  drawPixelRect(x + 31, y + 25, 4, 4, "#d8173a");
+  drawPixelRect(x + 16, y + 34, 4, 4, "#d8173a");
 }
 
 function drawMusic(object) {
-  // Bigger + clearer speaker with knobs
-  drawPixelRect(object.x, object.y + 2, object.w, object.h - 2, "#242231");
-  drawPixelRect(object.x + 2, object.y + 3, object.w - 4, object.h - 6, "#121118");
-
-  // Speaker grills
-  drawPixelRect(object.x + 4, object.y + 6, 10, 8, "#7fb7ff");
-  drawPixelRect(object.x + 14, object.y + 6, 8, 8, "#8bd8bd");
-
-  // Knob ring
-  drawPixelRect(object.x + 4, object.y + 14, 5, 3, "#ffd166");
-  drawPixelRect(object.x + 11, object.y + 14, 5, 3, "#ffd166");
-  drawPixelRect(object.x + 18, object.y + 14, 3, 3, "#ef7895");
-
-  // Top bar
-  drawPixelRect(object.x + 6, object.y, object.w - 12, 2, "#ffd166");
+  drawPixelRect(object.x, object.y, object.w, object.h, "#242231");
+  drawPixelRect(object.x + 3, object.y + 3, 8, 8, "#7fb7ff");
+  drawPixelRect(object.x + 15, object.y + 4, 7, 7, "#8bd8bd");
+  drawPixelRect(object.x + 6, object.y + 14, 15, 2, "#ffd166");
 }
 
 function drawPlant(object) {
@@ -746,28 +749,15 @@ function drawPlant(object) {
 }
 
 function drawAbitha(object) {
-  // NPC: taller with hat + clearer face
-  drawPixelRect(object.x + 5, object.y - 1, 5, 4, "#ffd166"); // hat brim
-  drawPixelRect(object.x + 4, object.y - 4, 7, 4, "#ef7895"); // hat top
-
-  // Head
-  drawPixelRect(object.x + 4, object.y + 1, 7, 6, "#8b5a44");
-  // Face highlights
-  drawPixelRect(object.x + 5, object.y + 3, 1, 1, "#fff6d7");
-  drawPixelRect(object.x + 9, object.y + 3, 1, 1, "#fff6d7");
-
-  // Eyes
-  drawPixelRect(object.x + 5, object.y + 4, 2, 2, "#171217");
-  drawPixelRect(object.x + 9, object.y + 4, 2, 2, "#171217");
-
-  // Body
-  drawPixelRect(object.x + 3, object.y + 7, 9, 8, "#ef7895");
-  // Arms
-  drawPixelRect(object.x + 1, object.y + 9, 3, 6, "#8b5a44");
-  drawPixelRect(object.x + 12, object.y + 9, 3, 6, "#8b5a44");
-  // Legs
-  drawPixelRect(object.x + 4, object.y + 15, 3, 4, "#2d2638");
-  drawPixelRect(object.x + 10, object.y + 15, 3, 4, "#2d2638");
+  drawPixelRect(object.x + 4, object.y, 7, 6, "#2a1b18");
+  drawPixelRect(object.x + 3, object.y + 4, 9, 7, "#8b5a44");
+  drawPixelRect(object.x + 4, object.y + 10, 8, 8, "#ef7895");
+  drawPixelRect(object.x + 1, object.y + 12, 3, 7, "#8b5a44");
+  drawPixelRect(object.x + 12, object.y + 12, 3, 7, "#8b5a44");
+  drawPixelRect(object.x + 4, object.y + 18, 3, 3, "#2d2638");
+  drawPixelRect(object.x + 10, object.y + 18, 3, 3, "#2d2638");
+  drawPixelRect(object.x + 5, object.y + 7, 2, 2, "#171217");
+  drawPixelRect(object.x + 10, object.y + 7, 2, 2, "#171217");
 }
 
 function drawTv(object) {
@@ -781,39 +771,20 @@ function drawTv(object) {
 }
 
 function drawConsole(object) {
-  // Handheld console / mini arcade
-  drawPixelRect(object.x, object.y + 2, object.w, object.h - 2, "#242231");
-  drawPixelRect(object.x + 2, object.y + 4, object.w - 4, object.h - 7, "#121118");
-
-  // Screen
-  drawPixelRect(object.x + 7, object.y + 6, object.w - 14, 10, "#7fb7ff");
-  drawPixelRect(object.x + 9, object.y + 8, object.w - 18, 6, "#8bd8bd");
-
-  // Buttons row
-  drawPixelRect(object.x + 6, object.y + 14, 7, 3, "#ffd166");
-  drawPixelRect(object.x + 15, object.y + 14, 7, 3, "#ef7895");
-
-  // Tiny indicator
-  drawPixelRect(object.x + 24, object.y + 9, 3, 3, "#ef7895");
-  drawPixelRect(object.x + 22, object.y + 6, 2, 2, "#ffd166");
+  drawPixelRect(object.x, object.y + 4, object.w, object.h - 4, "#242231");
+  drawPixelRect(object.x + 7, object.y, object.w - 14, 10, "#121118");
+  drawPixelRect(object.x + 10, object.y + 3, 6, 3, "#8bd8bd");
+  drawPixelRect(object.x + 19, object.y + 3, 5, 3, "#ffd166");
+  drawPixelRect(object.x + 5, object.y + 13, 7, 3, "#7fb7ff");
+  drawPixelRect(object.x + 24, object.y + 12, 4, 4, "#ef7895");
 }
 
 function drawGift(object) {
-  // More readable wrapped gift with ribbon
-  drawPixelRect(object.x + 3, object.y + 9, object.w - 6, object.h - 10, "#ef7895"); // wrap
-  drawPixelRect(object.x + 5, object.y + 6, object.w - 10, 6, "#ff9ab0"); // top fold
-
-  // Ribbon vertical
-  drawPixelRect(object.x + 11, object.y + 4, 4, object.h - 7, "#ffd166");
-  drawPixelRect(object.x + 10, object.y + 6, 6, 2, "#fff6d7");
-
-  // Ribbon horizontal
-  drawPixelRect(object.x + 5, object.y + 15, 16, 3, "#ffd166");
-  drawPixelRect(object.x + 6, object.y + 15, 14, 2, "#fff6d7");
-
-  // Bow corners
-  drawPixelRect(object.x + 4, object.y + 8, 6, 5, "#ffd166");
-  drawPixelRect(object.x + object.w - 10, object.y + 8, 6, 5, "#ffd166");
+  drawPixelRect(object.x + 2, object.y + 7, object.w - 4, object.h - 7, "#ef7895");
+  drawPixelRect(object.x, object.y + 4, object.w, 7, "#ff9ab0");
+  drawPixelRect(object.x + 11, object.y + 3, 4, object.h - 3, "#ffd166");
+  drawPixelRect(object.x + 5, object.y, 8, 5, "#ffd166");
+  drawPixelRect(object.x + 14, object.y, 8, 5, "#ffd166");
 }
 
 function drawObject(object) {
@@ -845,34 +816,17 @@ function drawPlayer() {
   const bob = Math.sin(player.step) > 0 ? 1 : 0;
   const x = Math.round(player.x);
   const y = Math.round(player.y + bob);
+  drawPixelRect(x + 3, y, 6, 5, "#3b2620");
+  drawPixelRect(x + 2, y + 4, 8, 6, "#a7654a");
+  drawPixelRect(x + 2, y + 10, 8, 6, "#7fb7ff");
+  drawPixelRect(x, y + 11, 3, 5, "#a7654a");
+  drawPixelRect(x + 9, y + 11, 3, 5, "#a7654a");
+  drawPixelRect(x + 2, y + 16, 3, 4, "#22242f");
+  drawPixelRect(x + 7, y + 16, 3, 4, "#22242f");
 
-  // Hat / hair
-  drawPixelRect(x + 2, y, 8, 3, "#ffd166");
-  drawPixelRect(x + 3, y + 1, 6, 2, "#3b2620");
-
-  // Head + face
-  drawPixelRect(x + 2, y + 3, 8, 6, "#a7654a");
-  drawPixelRect(x + 4, y + 6, 1, 1, "#171217");
-  drawPixelRect(x + 8, y + 6, 1, 1, "#171217");
-
-  // Torso (mint jacket)
-  drawPixelRect(x + 2, y + 8, 8, 7, "#8bd8bd");
-  // Collar
-  drawPixelRect(x + 3, y + 8, 2, 2, "#ffd166");
-  drawPixelRect(x + 7, y + 8, 2, 2, "#ffd166");
-
-  // Arms
-  drawPixelRect(x, y + 10, 3, 6, "#a7654a");
-  drawPixelRect(x + 9, y + 10, 3, 6, "#a7654a");
-
-  // Legs
-  drawPixelRect(x + 2, y + 15, 3, 4, "#22242f");
-  drawPixelRect(x + 7, y + 15, 3, 4, "#22242f");
-
-  // Direction marker (front)
   if (player.dir !== "up") {
-    drawPixelRect(x + 4, y + 12, 1, 1, "#171217");
-    drawPixelRect(x + 7, y + 12, 1, 1, "#171217");
+    drawPixelRect(x + 4, y + 7, 1, 1, "#171217");
+    drawPixelRect(x + 8, y + 7, 1, 1, "#171217");
   }
 }
 
