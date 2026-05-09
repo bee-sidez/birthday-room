@@ -25,7 +25,7 @@ ctx.imageSmoothingEnabled = false;
 const TILE = 16;
 const W = canvas.width;
 const H = canvas.height;
-const GREETING_CARD_MESSAGE = "Dear Muthu, wishing you a birthday filled with warmth, laughter, music, cake, and all the tiny moments that make the day feel special.";
+const GREETING_CARD_MESSAGE = "Wishing you a very happy birthday, Muthu! Hope this year brings you loads of happiness, laughter, success, and all the good vibes you deserve. And honestly, I'm more excited because it’s the first one of yours I get to celebrate :)";
 const TRAKT_LIST_URL = "https://app.trakt.tv/users/abithav/lists/hbd";
 const TV_RECOMMENDATIONS = [
   {
