@@ -697,26 +697,27 @@ function drawCake(object) {
   const x = object.x;
   const y = object.y;
 
-  // Brown table (at the cake position)
-  drawPixelRect(x + 6, y + 32, 36, 10, "#7a5649");
-  drawPixelRect(x + 10, y + 35, 28, 6, "#46312b");
+  // Rectangular brown table with a darker lip
+  drawPixelRect(x + 6, y + 34, 36, 8, "#7a5649");
+  drawPixelRect(x + 10, y + 37, 28, 2, "#46312b");
 
-  // Small cake sitting on the table (no candles/sticks)
-  drawPixelRect(x + 10, y + 21, 28, 10, "#6b3f2f");   // base shadow
-  drawPixelRect(x + 8, y + 17, 32, 10, "#f8d6a5");    // cake body
-  drawPixelRect(x + 11, y + 20, 6, 7, "#fff1ce");     // frosting drips
-  drawPixelRect(x + 22, y + 20, 6, 8, "#fff1ce");
-  drawPixelRect(x + 28, y + 22, 3, 5, "#fff1ce");
+  // Mini cake on top of the table (smaller than before, no candles)
+  drawPixelRect(x + 13, y + 24, 22, 6, "#6b3f2f"); // base shadow
+  drawPixelRect(x + 12, y + 20, 24, 7, "#f8d6a5"); // cake body
 
-  // Decorative top blocks
-  drawPixelRect(x + 13, y + 13, 4, 4, "#ef334d");
-  drawPixelRect(x + 20, y + 12, 6, 5, "#ef334d");
-  drawPixelRect(x + 28, y + 14, 4, 4, "#d8173a");
-  drawPixelRect(x + 16, y + 16, 4, 3, "#fff6d7");
+  // Frosting drips
+  drawPixelRect(x + 15, y + 21, 4, 4, "#fff1ce");
+  drawPixelRect(x + 21, y + 21, 3, 5, "#fff1ce");
+  drawPixelRect(x + 24, y + 23, 2, 3, "#fff1ce");
 
-  // Tiny chocolate side details
-  drawPixelRect(x + 12, y + 27, 4, 3, "#3a221c");
-  drawPixelRect(x + 26, y + 27, 4, 3, "#3a221c");
+  // Simple top decoration
+  drawPixelRect(x + 15, y + 18, 4, 4, "#ef334d");
+  drawPixelRect(x + 20, y + 17, 6, 5, "#ef7895");
+  drawPixelRect(x + 23, y + 18, 3, 3, "#d8173a");
+
+  // Small side chocolate hints
+  drawPixelRect(x + 13, y + 26, 3, 2, "#3a221c");
+  drawPixelRect(x + 26, y + 26, 3, 2, "#3a221c");
 }
 
 function drawMusic(object) {
